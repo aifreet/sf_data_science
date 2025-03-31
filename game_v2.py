@@ -41,11 +41,9 @@ def predict(number: int = 1) -> int:
         count += 1
         predict_number = next_guess(predict_number, count, less_than)  # предполагаемое число
         if number == predict_number:
-            break  # выход из цикла если угадали
+            break  # выход из цикла, если угадали
         else:
-            less_than = number < predict_number
-        if count > 20:
-            print(number)
+            less_than = number < predict_number #определяем, меньше ли предположенное число искомого
     return count
 
 
